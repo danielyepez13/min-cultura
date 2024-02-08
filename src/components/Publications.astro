@@ -1,0 +1,22 @@
+---
+const news = [
+  { title: 'Libro 1', image: '/fondo3.jpg', description: 'Descripción de la libro 1' },
+  { title: 'Libro 2', image: '/fondo3.jpg', description: 'Descripción de la libro 2' },
+  { title: 'Libro 3', image: '/fondo3.jpg', description: 'Descripción de la libro 3' },
+  { title: 'Libro 4', image: '/fondo3.jpg', description: 'Descripción de la libro 4' },
+]
+---
+
+<div class="w-full px-2 my-16">
+  <div class="grid grid-cols-2 gap-4">
+    {news.map((item, index) => (
+      <div class="bg-white shadow-md rounded-lg overflow-hidden flex">
+        <img src={item.image} alt={item.title} class="w-1/2 h-48 object-cover" />
+        <div class="p-6 w-1/2">
+          <h2 class="text-2xl font-bold mb-2">{item.title}</h2>
+          <p class="text-gray-700">{item.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
